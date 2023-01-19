@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(doubleBG.jpg);
+    background-size:cover;
+}
+.parent{
+    text-align: center;
+    margin: 20px;
+}
+.container{
+    display:inline-block;  
+    margin: 30px;
+    background-color: rgb(225, 233, 245);
+    border-color: rgb(110, 124, 124);
+    
+}
+label{
+    font-size: large;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.form-control{
+    border: 2px solid;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: auto;
+    margin-left: 20px ;
+    position: relative;    
+    margin-bottom: 10px;
+}
+button{
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: larger;
+    background-color: rgba(21, 122, 204, 0.801);
+    margin-left: 30px;
+    width: 80%;
+    height: auto;
+}
+.input-field{
+    display: flex;
+}
