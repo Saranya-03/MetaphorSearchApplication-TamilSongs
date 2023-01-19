@@ -1,0 +1,57 @@
+
+
+<html>
+  <head>
+      <title>TamilMetaphors</title>
+      <link rel="stylesheet" href="../CSS/style.css">
+      <link rel="stylesheet" href="/css/all.min.css">
+  </head>
+
+  <body style="background-image: url('bgImg.jpeg');">
+    <div class="container" style="margin: 30px;">
+      <form action="http://127.0.0.1:5000/search-meaning" method="post" style="margin: 30px;">
+        <fieldset>
+          <legend>Type a Metaphor to Search Here...</legend>
+          <div class="inner-form">
+            <div class="input-field" style="margin: 30px;">
+              <input id="search" type="text" placeholder="Type here..." value="" class="queryName" name="queryName"/>
+              <button type="search" class="btn btn-search" style="margin: 30px;">Search</button>
+          </div>
+		    </fieldset>
+      </form>
+    </div>
+
+    <div class="s006" style="margin: 30px;">
+      <form action="http://127.0.0.1:5000/search-metaphors" method="post" style="margin: 30px;">
+        <fieldset>
+          <legend>Find Metaphors...</legend>
+            <div class="form-row" style="margin: 30px;">
+              <div class="form-group col-md-6" style="margin: 30px;">
+                <label for="sourceDom">Source Domain: </label>
+                <input type="text" class="form-control" id="sourceDom" name="sourceDom">
+              </div>
+              <div class="form-group col-md-6" style="margin: 30px;">
+                <label for="inputTarget">Target Domain: </label>
+                <input type="text" class="form-control" id="inputTarget" name="inputTarget">
+              </div>              
+            </div>
+            <div class="form-row" style="margin: 30px;">
+              <div class="form-group col-md-4">
+                <label for="inputType">Type of Metaphor: </label>
+                <select id="inputType" class="form-control" name="inputType">
+                  <option selected>Choose...</option>
+                  <option>அழகு</option>
+                  <option>குணம்</option>
+                  <option>உணர்ச்சி</option>
+                  <option>பயன்</option>
+                  <option>தொழில்</option>
+                  <option>வாழ்வியல் நடைமுறை</option>
+                </select>
+              </div>
+            </div>
+            <button type="search" class="btn btn-primary" style="margin: 30px;">Search Metaphors</button>
+            </fieldset>
+          </form>
+    </div>
+  </body>
+</html>

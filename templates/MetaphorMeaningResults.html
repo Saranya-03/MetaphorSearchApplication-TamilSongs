@@ -1,0 +1,32 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="s006" style="margin: 30px;">
+		{% if hits %}
+		<hgroup class="mb20">
+			<h1 class="text-success">Search Results Are Ready</h1>
+			<h2 class="lead" id="results"><strong class="text-success">{{ num_results }}</strong> results were found for the search for <strong class="text-success">{{  query  }}</strong></h2>
+		</hgroup>
+
+		<section id='song_section' class="col-md-8">
+			{% for hit in hits %}
+			<article class="search-result row">
+				<div class="col-md-12">
+					<ul class="meta-search">
+                        <li> <span>Song Title: {{ hit._source['பாடலின் பெயர்']}}</span></li>
+						<li> <span>Metaphor: {{ hit._source['உருவக அணி'] }} </span></li></span></li>
+						<li> <span>Type of Metaphor: {{ hit._source['உருவக அணி வகை' ]}}</span></li>
+						<li> <span>Source domain: {{ hit._source.மூலப்பொருள் }}</span></li>
+						<li> <span>Target domain: {{ hit._source.இலக்கு  }} </span></li>
+						<li> <span>Interpretation: {{ hit._source.விளக்கம்  }} </span></li>
+					</ul>
+				</div>
+				<span class="clearfix borda"></span>
+			</article>
+			{% endfor %}
+		</section>
+		{% else %}
+		<h2 class="text-danger">No results found for the entered metaphor</h2>
+		{% endif %}
+	</div>

@@ -1,0 +1,46 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="s006" style="margin: 30px;">
+		{% if hits %}
+		<hgroup class="mb20">
+			<h1 class="text-success">Search Results Are Ready</h1>
+			<h2 class="lead" id="results"><strong class="text-success">{{ num_results }}</strong> metaphors were found for the search </h2>
+            <h2 class="lead" id="results"><strong class="text-success">Type of Metaphor :<span class="text-primary">{{ query["inputType"]  }}</span>
+				 <span style="margin-left: 50px;">Source domain : <span class="text-primary">{{  query["sourceDom"]  }}</span>
+				 <span style="margin-left: 50px;">Target domain: <span class="text-primary"> {{  query["inputTarget"]  }}</span></strong></h2>
+            <h2 class="lead" id="results"><strong class="text-success"></strong></h2>
+            <h2 class="lead" id="results"><strong class="text-success"></strong></h2>
+
+		</hgroup>
+
+		<section id='song_section' class="col-md-8">
+			{% for hit in hits %}
+			<article class="search-result row">
+				<div class="col-md-12">
+					<ul class="meta-search">
+                        <li> <span>Song Title: {{ hit._source['பாடலின் பெயர்']}}</span></li>
+						<li><span>Lyricist: {{ hit._source.பாடலாசிரியர்  }} </span></li>
+						<li> <span>Singer: {{ hit._source.பாடகர்}}</span></li>
+						<li> <span>Composer: {{ hit._source.இசையமைப்பாளா்  }} </span></li>
+						<li> <span>Album: {{ hit._source.திரைப்படம்  }} </span></li>
+						<li> <span>Released Year: {{ hit._source['வெளியிடப்பட்ட ஆண்டு'] }}</span></li>
+						<li> <span>Metaphor: {{ hit._source['உருவக அணி'] }} </span></li></span></li>
+						<li> <span>Type of Metaphor: {{ hit._source['உருவக அணி வகை' ]}}</span></li>
+						<li> <span>Source domain: {{ hit._source.மூலப்பொருள் }}</span></li>
+						<li> <span>Target domain: {{ hit._source.இலக்கு  }} </span></li>
+						<li> <span>Interpretation: {{ hit._source.விளக்கம்  }} </span></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+
+				</div>
+				<span class="clearfix borda"></span>
+			</article>
+			{% endfor %}
+		</section>
+		{% else %}
+		<h2 class="text-danger">No metaphors found for the entered metaphors details</h2>
+		{% endif %}
+</div>

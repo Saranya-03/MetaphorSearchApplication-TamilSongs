@@ -1,0 +1,75 @@
+.container{
+    height: 600px;
+    width: 400px;
+    top: 100px;
+    left:500px;
+    background-color: cornflowerblue;
+    border-color: darkcyan;
+    position: absolute;
+}
+.form-control{
+    margin-bottom: 10px;
+    position: relative;
+    
+}
+h1{
+    color: seagreen;
+    padding-left: 35%;
+}
+.form-control label{
+    font-size: large;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.form-control input{
+    border: 2px solid;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 300px;
+    margin-left: 20px ;
+    width: 90%;
+    
+    
+}
+.form-control i{
+    position: absolute;
+    right: 25px;
+    top: 40px;
+    visibility: hidden;
+    
+    
+}
+.form-control i.fa-exclamation{
+    color: red;
+}
+.form-control i.fa-check-circle{
+    color: green;
+}
+.form-control small{
+    color: rgb(201, 3, 3);
+    visibility: hidden;
+    font-size: medium;
+    padding-left: 20px;
+}
+input.submit{
+    box-sizing: border-box;
+    size: 10px;
+    font-size: larger;
+    background-color: teal;
+    margin-left: 30px;
+    width: 80%;
+    height: 40px;
+}
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation{
+    visibility: visible;
+}
+.form-control.error small{
+    visibility: visible;
+}
